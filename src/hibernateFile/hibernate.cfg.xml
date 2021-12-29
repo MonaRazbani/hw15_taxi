@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+<session-factory>
+
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/taxi_hw15</property> <!--select url-->
+        <property name="connection.username">mona_razbani</property>
+        <property name="connection.password">Pendi_Pengi142131</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="connection.pool_size">3</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <mapping class="models.Car"/>
+        <mapping class="models.Driver"/>
+        <mapping class="models.Passenger"/>
+        <mapping class="models.Trip"/>
+
+    </session-factory>
+</hibernate-configuration>
